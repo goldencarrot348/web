@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器玩法 - GoldenCarrot 我的世界服务器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>GoldenCarrot 我的世界服务器</h1>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GoldenCarrot</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gameplay.html" class="active">服务器玩法</a></li>
+                <li><a href="gallery.html">图片欣赏</a></li>
+                <li><a href="rules.html">服务器规则</a></li>
+                <li><a href="community.html">服务器公告</a></li>
+                <li><a href="faq.html">常见问题</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="section">
+            <h2>服务器玩法详情</h2>
+            <p>GoldenCarrot服务器提供多种丰富多样的游戏玩法，满足不同玩家的需求。无论你是喜欢生存建造、PVP竞技还是RPG冒险，在这里都能找到适合你的游戏模式。</p>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="survival">原版生存</button>
+                    <button class="tab-btn" data-tab="minigames">小游戏竞技</button>
+                    <button class="tab-btn" data-tab="creative">创造建筑</button>
+                    <button class="tab-btn" data-tab="rpg">RPG冒险</button>
+                </div>
+                
+                <div id="survival" class="tab-content active">
+                    <h3>原版生存</h3>
+                    <p>纯净的原版生存体验，没有任何影响游戏平衡的插件。在这里，你可以：</p>
+                    <ul class="rules-list">
+                        <li>体验最纯粹的Minecraft生存玩法</li>
+                        <li>与其他玩家合作建造宏伟建筑</li>
+                        <li>探索无限的世界，寻找珍稀资源</li>
+                        <li>建立自己的基地和红石自动化系统</li>
+                        <li>参与服务器定期举办的生存挑战活动</li>
+                    </ul>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="images/survival1.jpg" alt="生存模式">
+                            <div class="gallery-caption">玩家在生存模式中建造的基地</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="minigames" class="tab-content">
+                    <h3>小游戏竞技</h3>
+                    <p>各种精彩刺激的小游戏，展现你的技巧和策略：</p>
+                    <ul class="rules-list">
+                        <li>空岛战争：在浮空岛屿上进行的团队对抗</li>
+                        <li>饥饿游戏：在有限的资源中生存到最后</li>
+                        <li>跑酷挑战：测试你的反应能力和操作技巧</li>
+                        <li>PVP竞技场：与其他玩家一决高下</li>
+                        <li>建筑大师：限时建筑比赛，展示创意</li>
+                    </ul>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="images/minigames1.jpg" alt="小游戏">
+                            <div class="gallery-caption">激烈的PVP对战场景</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="creative" class="tab-content">
+                    <h3>创造建筑</h3>
+                    <p>释放你的创造力，建造令人惊叹的建筑作品：</p>
+                    <ul class="rules-list">
+                        <li>无限资源，专注于建筑创作</li>
+                        <li>世界编辑工具，帮助你快速塑造地形</li>
+                        <li>定期举办建筑比赛，评选最佳作品</li>
+                        <li>可以申请个人建筑区域，不受干扰</li>
+                        <li>作品展示区，让其他玩家欣赏你的创作</li>
+                    </ul>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="images/creative1.jpg" alt="创造模式">
+                            <div class="gallery-caption">玩家在创造模式中的宏伟建筑</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="rpg" class="tab-content">
+                    <h3>RPG冒险</h3>
+                    <p>沉浸式的角色扮演体验，完成任务，升级装备：</p>
+                    <ul class="rules-list">
+                        <li>独特的剧情任务和世界观设定</li>
+                        <li>自定义装备和技能系统</li>
+                        <li>多样化的职业选择，各具特色</li>
+                        <li>BOSS战和团队副本挑战</li>
+                        <li>玩家交易系统和经济体系</li>
+                    </ul>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="images/rpg1.jpg" alt="RPG模式">
+                            <div class="gallery-caption">RPG模式中的任务场景</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>服务器特色活动</h2>
+            <div class="news-grid">
+                <div class="card">
+                    <img src="images/event1.jpg" alt="建筑大赛" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">月度建筑大赛</h3>
+                        <p class="card-text">每月举办的建筑比赛，优胜者可获得丰厚奖励和专属称号。下一届主题：未来城市。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/event2.jpg" alt="生存挑战" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">极限生存挑战</h3>
+                        <p class="card-text">在有限的资源和恶劣的环境中生存，看谁能坚持最久。每周日晚8点开始。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/event3.jpg" alt="团队竞技" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">团队竞技赛</h3>
+                        <p class="card-text">组建你的团队，参与多种竞技模式的比赛，争夺服务器冠军。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>服务器特色活动</h2>
+            <div class="news-grid">
+                <div class="card">
+                    <img src="images/event1.jpg" alt="建筑大赛" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">月度建筑大赛</h3>
+                        <p class="card-text">每月举办的建筑比赛，优胜者可获得丰厚奖励和专属称号。下一届主题：未来城市。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/event2.jpg" alt="生存挑战" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">极限生存挑战</h3>
+                        <p class="card-text">在有限的资源和恶劣的环境中生存，看谁能坚持最久。每周日晚8点开始。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/event3.jpg" alt="团队竞技" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">团队竞技赛</h3>
+                        <p class="card-text">组建你的团队，参与多种竞技模式的比赛，争夺服务器冠军。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+        
+
+    </div>
+
+    <section class="section">
+        <h2>捐赠排行榜</h2>
+        <div class="donation-ranking" id="donationRanking">
+            <!-- 捐赠排行榜将通过JavaScript动态添加 -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="gameplay.html">服务器玩法</a>
+                <a href="gallery.html">图片欣赏</a>
+                <a href="rules.html">服务器规则</a>
+                <a href="community.html">玩家社区</a>
+                <a href="faq.html">常见问题</a>
+            </div>
+            <p>© 2025 GoldenCarrot Minecraft Server. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <style>
+        body {
+            font-family: 'Poppins', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="10" height="10" stroke="rgba(52, 152, 219, 0.05)" stroke-width="1"/></svg>');
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            opacity: 0;
+            transform: scale(0.5);
+            transition: transform 0.8s ease, opacity 0.8s ease;
+            pointer-events: none;
+        }
+        
+        .section:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.1)" points="0,100 100,0 100,100"/></svg>');
+            background-size: cover;
+            animation: shimmer 3s infinite alternate;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.2)"/></svg>');
+            background-size: 30px 30px;
+            opacity: 0.5;
+        }
+        
+        @keyframes shimmer {
+            0% {
+                opacity: 0.7;
+                transform: translateX(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(5px);
+            }
+        }
+        
+        .nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .nav:hover {
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .donation-ranking {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .donation-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .donation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .donation-rank {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .donation-info {
+            margin-top: 1rem;
+        }
+
+        .donation-amount {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .donation-time {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+
+    <script>
+        // 渲染捐赠排行榜
+        function renderDonationRanking() {
+            const donations = JSON.parse(localStorage.getItem('donations') || '[]');
+            const sortedDonations = donations.sort((a, b) => b.amount - a.amount);
+            const donationRanking = document.getElementById('donationRanking');
+
+            donationRanking.innerHTML = sortedDonations.map((donation, index) => `
+                <div class="donation-card">
+                    <div class="donation-rank">#${index + 1}</div>
+                    <div class="donation-info">
+                        <h3>${donation.playerName}</h3>
+                        <div class="donation-amount">¥${donation.amount}</div>
+                        <div class="donation-time">${new Date(donation.time).toLocaleDateString()}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 初始化显示捐赠排行榜
+        renderDonationRanking();
+
+        // 标签切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 移除所有活动状态
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // 添加当前活动状态
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

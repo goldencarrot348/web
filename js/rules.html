@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器规则 - GoldenCarrot 我的世界服务器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>GoldenCarrot 我的世界服务器</h1>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GoldenCarrot</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gameplay.html">服务器玩法</a></li>
+                <li><a href="gallery.html">图片欣赏</a></li>
+                <li><a href="rules.html" class="active">服务器规则</a></li>
+                <li><a href="community.html">服务器公告</a></li>
+                <li><a href="faq.html">常见问题</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="section">
+            <h2>服务器规则</h2>
+            <div class="alert alert-info">
+                <p>为了维护良好的游戏环境，请所有玩家遵守以下规则。违反规则可能导致警告、临时封禁或永久封禁。</p>
+            </div>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="general">基本规则</button>
+                    <button class="tab-btn" data-tab="gameplay">游戏玩法规则</button>
+                    <button class="tab-btn" data-tab="chat">聊天规则</button>
+                    <button class="tab-btn" data-tab="punishment">处罚制度</button>
+                </div>
+                
+                <div id="general" class="tab-content active">
+                    <h3>基本规则</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <strong>禁止使用任何作弊客户端或模组</strong>
+                            <p>包括但不限于透视、飞行、自动攻击、矿物探测等影响游戏平衡的功能。允许使用优化游戏性能、小地图等不影响游戏平衡的模组。</p>
+                        </li>
+                        <li>
+                            <strong>禁止恶意破坏他人建筑和财产</strong>
+                            <p>未经允许，不得破坏、偷窃或修改其他玩家的建筑和物品。这包括公共设施和私人领地。</p>
+                        </li>
+                        <li>
+                            <strong>禁止发布任何违规内容或广告</strong>
+                            <p>包括但不限于色情、暴力、歧视性言论，以及与服务器无关的广告和宣传内容。</p>
+                        </li>
+                        <li>
+                            <strong>尊重其他玩家，保持友善的游戏环境</strong>
+                            <p>不得辱骂、威胁或骚扰其他玩家。尊重每个人的游戏体验和个人隐私。</p>
+                        </li>
+                        <li>
+                            <strong>禁止利用游戏漏洞</strong>
+                            <p>发现游戏或服务器漏洞应立即向管理员报告，而非利用它们获取不正当利益。</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="gameplay" class="tab-content">
+                    <h3>游戏玩法规则</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <strong>资源世界开采规则</strong>
+                            <p>资源世界会定期重置，可以自由开采。主世界中应避免大规模破坏自然地形，保持环境美观。</p>
+                        </li>
+                        <li>
+                            <strong>红石设备使用限制</strong>
+                            <p>复杂的红石设备可能导致服务器卡顿，请合理设计并遵循管理员的优化建议。过于卡顿的装置可能被要求拆除。</p>
+                        </li>
+                        <li>
+                            <strong>领地规则</strong>
+                            <p>玩家可以申请领地保护自己的建筑。领地大小根据玩家等级有所不同。禁止圈地不建造或圈过大的地皮。</p>
+                        </li>
+                        <li>
+                            <strong>PVP规则</strong>
+                            <p>仅在指定的PVP区域或双方同意的情况下才能进行PVP。禁止使用不公平手段击杀其他玩家或反复骚扰新手。</p>
+                        </li>
+                        <li>
+                            <strong>交易规则</strong>
+                            <p>玩家间交易应公平进行，禁止欺骗或强制交易。服务器不对玩家间交易纠纷负责，请谨慎交易。</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="chat" class="tab-content">
+                    <h3>聊天规则</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <strong>禁止刷屏</strong>
+                            <p>短时间内发送大量相同或相似的消息被视为刷屏，这会影响其他玩家的聊天体验。</p>
+                        </li>
+                        <li>
+                            <strong>禁止使用不适当的语言</strong>
+                            <p>包括但不限于脏话、侮辱性言论、歧视性言论等。保持聊天内容友善和尊重。</p>
+                        </li>
+                        <li>
+                            <strong>禁止发布个人信息</strong>
+                            <p>不要在公共聊天中分享自己或他人的个人信息，如真实姓名、地址、电话号码等。</p>
+                        </li>
+                        <li>
+                            <strong>使用适当的聊天频道</strong>
+                            <p>根据聊天内容选择合适的频道，如全局聊天、队伍聊天、私聊等，避免在错误的频道发送不相关的内容。</p>
+                        </li>
+                        <li>
+                            <strong>禁止过度争论</strong>
+                            <p>有分歧时保持理性讨论，避免激烈争吵。如有严重分歧，请联系管理员协调解决。</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="punishment" class="tab-content">
+                    <h3>处罚制度</h3>
+                    <table class="leaderboard">
+                        <thead>
+                            <tr>
+                                <th>违规行为</th>
+                                <th>首次处罚</th>
+                                <th>再次处罚</th>
+                                <th>多次处罚</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>使用作弊客户端/模组</td>
+                                <td>7天封禁</td>
+                                <td>30天封禁</td>
+                                <td>永久封禁</td>
+                            </tr>
+                            <tr>
+                                <td>破坏他人建筑</td>
+                                <td>警告 + 恢复损失</td>
+                                <td>3天封禁 + 恢复损失</td>
+                                <td>15天封禁 + 恢复损失</td>
+                            </tr>
+                            <tr>
+                                <td>发布违规内容</td>
+                                <td>禁言2小时</td>
+                                <td>禁言24小时</td>
+                                <td>7天封禁</td>
+                            </tr>
+                            <tr>
+                                <td>辱骂/骚扰玩家</td>
+                                <td>禁言1小时</td>
+                                <td>禁言12小时</td>
+                                <td>3天封禁</td>
+                            </tr>
+                            <tr>
+                                <td>利用游戏漏洞</td>
+                                <td>警告 + 没收非法所得</td>
+                                <td>3天封禁 + 没收非法所得</td>
+                                <td>15天封禁 + 没收非法所得</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="alert alert-warning" style="margin-top: 1rem;">
+                        注意：特别恶劣的违规行为可能直接导致永久封禁。所有处罚由管理员团队根据具体情况决定，并保留最终解释权。
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>申诉流程</h2>
+            <p>如果你认为自己受到了不公正的处罚，可以通过以下流程提出申诉：</p>
+            <ol class="rules-list">
+                <li>
+                    <strong>填写申诉表单</strong>
+                    <p>在我们的官方网站或Discord服务器中填写申诉表单，详细说明情况和申诉理由。</p>
+                </li>
+                <li>
+                    <strong>等待审核</strong>
+                    <p>管理员团队会在48小时内审核你的申诉，并进行调查。</p>
+                </li>
+                <li>
+                    <strong>接受结果</strong>
+                    <p>无论申诉结果如何，都应尊重管理员的最终决定。重复无理由的申诉可能导致申诉权被暂时取消。</p>
+                </li>
+            </ol>
+            
+            <div class="form-group" style="margin-top: 2rem;">
+                <a href="admin.html" class="btn">管理举报邮箱</a>
+                <a href="#" class="btn">填写申诉表单</a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>举报其他玩家</h2>
+            <p>如果你发现其他玩家违反服务器规则，请及时举报：</p>
+            
+            <form class="form" id="report-form">
+                <div class="form-group">
+                    <label for="reporter">你的游戏ID</label>
+                    <input type="text" id="reporter" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reported">被举报玩家ID</label>
+                    <input type="text" id="reported" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="violation">违规类型</label>
+                    <select id="violation" class="form-control" required>
+                        <option value="">请选择违规类型</option>
+                        <option value="cheat">使用作弊客户端/模组</option>
+                        <option value="grief">破坏建筑/偷窃</option>
+                        <option value="abuse">辱骂/骚扰</option>
+                        <option value="exploit">利用游戏漏洞</option>
+                        <option value="other">其他违规行为</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">详细描述</label>
+                    <textarea id="description" class="form-control" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="evidence">证据（截图/录像）</label>
+                    <input type="file" id="evidence" accept="image/*,video/*">
+                    <small>提供证据可以帮助我们更快处理举报</small>
+                </div>
+                
+                <button type="submit" class="btn">提交举报</button>
+            </form>
+            
+            <div class="form-group" style="margin-top: 2rem;">
+                <label for="report-email">举报邮箱设置</label>
+                <input type="email" id="report-email" class="form-control" placeholder="请输入接收举报的邮箱地址">
+                <button id="save-email" class="btn" style="margin-top: 0.5rem;">保存设置</button>
+            </div>
+            
+            <script>
+                document.getElementById('report-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const reportEmail = localStorage.getItem('reportEmail') || 'admin@goldencarrot.xyz';
+                    const formData = new FormData(this);
+                    
+                    // 保存举报信息到localStorage
+                    const report = {
+                        id: Date.now(),
+                        reporter: formData.get('reporter'),
+                        reported: formData.get('reported'),
+                        violation: formData.get('violation'),
+                        description: formData.get('description'),
+                        date: new Date().toISOString()
+                    };
+                    
+                    let reports = JSON.parse(localStorage.getItem('reports') || '[]');
+                    reports.unshift(report);
+                    localStorage.setItem('reports', JSON.stringify(reports));
+                    
+                    // 发送邮件通知
+                    const mailtoLink = `mailto:${reportEmail}?subject=玩家举报&body=举报人: ${formData.get('reporter')}%0D%0A被举报人: ${formData.get('reported')}%0D%0A违规类型: ${formData.get('violation')}%0D%0A详细描述: ${formData.get('description')}`;
+                    window.location.href = mailtoLink;
+                    
+                    alert('举报已提交，管理员会尽快处理！');
+                    this.reset();
+                });
+                
+                document.getElementById('save-email').addEventListener('click', function() {
+                    const email = document.getElementById('report-email').value;
+                    if(email) {
+                        localStorage.setItem('reportEmail', email);
+                        alert('举报邮箱设置成功！');
+                    }
+                });
+                
+                // 初始化时加载已保存的邮箱
+                const savedEmail = localStorage.getItem('reportEmail');
+                if(savedEmail) {
+                    document.getElementById('report-email').value = savedEmail;
+                }
+            </script>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="gameplay.html">服务器玩法</a>
+                <a href="gallery.html">图片欣赏</a>
+                <a href="rules.html">服务器规则</a>
+                <a href="community.html">玩家社区</a>
+                <a href="faq.html">常见问题</a>
+            </div>
+            <p>© 2025 GoldenCarrot Minecraft Server. 保留所有权利。</p>
+            <p>程序设计：TBCNB AND Claude 未经授权，禁止使用源代码</p>
+        </div>
+    </footer>
+
+    <script>
+        // 标签切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 移除所有活动状态
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // 添加当前活动状态
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

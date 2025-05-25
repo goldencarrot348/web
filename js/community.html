@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器公告 - GoldenCarrot 我的世界服务器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/server-status.js"></script>
+    <script>
+        // 从localStorage加载公告和活动数据
+        function loadCommunityContent() {
+            const content = JSON.parse(localStorage.getItem('community_content') || '{}');
+            const announcements = content.announcements || [];
+            const events = content.events || [];
+            
+            // 更新公告列表
+            const announcementsList = document.getElementById('announcementsList');
+            announcementsList.innerHTML = announcements.map(announcement => `
+                <div class="announcement">
+                    <div class="announcement-header">
+                        <h3 class="announcement-title">${announcement.title}</h3>
+                        <small class="announcement-date">${new Date(announcement.date).toLocaleString()}</small>
+                    </div>
+                    <div class="announcement-content">
+                        <p>${announcement.content}</p>
+                    </div>
+                    <div class="announcement-tag">${announcement.tag || '公告'}</div>
+                </div>
+            `).join('');
+            
+            // 更新活动列表
+            const eventsList = document.getElementById('eventsList');
+            eventsList.innerHTML = events.map(event => `
+                <div class="event-item">
+                    <div class="event-date">${new Date(event.date).toLocaleString()}</div>
+                    <h4 class="event-title">${event.title}</h4>
+                    <p>${event.description}</p>
+                </div>
+            `).join('');
+            
+            // 每60秒自动刷新一次数据
+            setInterval(loadCommunityContent, 60000);
+        }
+        
+        // 页面加载完成后执行
+        window.onload = loadCommunityContent;
+    </script>
+    <style>
+        .community-grid {
+            display: grid;
+            grid-template-columns: 7fr 3fr;
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .announcement {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .announcement:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .announcement-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .announcement-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .announcement-date {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .announcement-content {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .announcement-content p {
+            margin-bottom: 1rem;
+        }
+
+        .announcement-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .announcement-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .announcement-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-top: 1rem;
+            margin-right: 0.5rem;
+        }
+        
+        .sidebar-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .sidebar-title {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .player-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .player-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .player-item:last-child {
+            border-bottom: none;
+        }
+        
+        .player-status {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .online {
+            background-color: var(--secondary);
+            box-shadow: 0 0 5px var(--secondary);
+            animation: pulse 2s infinite;
+        }
+        
+        .offline {
+            background-color: #ccc;
+        }
+        
+        .event-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .event-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .event-date {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .event-title {
+            margin: 0.5rem 0;
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .tag:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>GoldenCarrot 我的世界服务器</h1>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GoldenCarrot</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gameplay.html">服务器玩法</a></li>
+                <li><a href="gallery.html">图片欣赏</a></li>
+                <li><a href="rules.html">服务器规则</a></li>
+                <li><a href="community.html" class="active">服务器公告</a></li>
+                <li><a href="faq.html">常见问题</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="section">
+            <h2>服务器公告</h2>
+            <p>欢迎查看GoldenCarrot服务器的最新公告！这里发布服务器的重要通知、更新信息和活动预告。</p>
+            
+            <div class="alert alert-info">
+                <p>请定期关注本页面，及时了解服务器的最新动态！</p>
+            </div>
+            
+            <div class="community-grid">
+                <div class="main-content">
+                    <h3>服务器公告</h3>
+                    <div id="announcementsList">
+                        <!-- 公告内容将通过JavaScript动态加载 -->
+                    </div>
+                </div>
+                
+                <div class="sidebar">
+                    
+                    
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">即将举行的活动</h3>
+                        <div id="eventsList">
+                            <!-- 活动内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">热门标签</h3>
+                        <div class="tag-cloud">
+                            <div class="tag">建筑</div>
+                            <div class="tag">红石</div>
+                            <div class="tag">生存</div>
+                            <div class="tag">PVP</div>
+                            <div class="tag">更新</div>
+                            <div class="tag">活动</div>
+                            <div class="tag">教程</div>
+                            <div class="tag">招募</div>
+                            <div class="tag">创造</div>
+                            <div class="tag">探险</div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">加入我们的社区</h3>
+                        <p>关注我们的社交媒体，获取最新资讯：</p>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                            <a href="#" class="btn btn-secondary">QQ群</a>
+                            <a href="#" class="btn btn-accent">微信</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="gameplay.html">服务器玩法</a>
+                <a href="gallery.html">图片欣赏</a>
+                <a href="rules.html">服务器规则</a>
+                <a href="community.html">玩家社区</a>
+                <a href="faq.html">常见问题</a>
+            </div>
+            <p>© 2025 GoldenCarrot Minecraft Server. 保留所有权利。</p>
+            <p>程序设计：TBCNB AND Claude 未经授权，禁止使用源代码</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

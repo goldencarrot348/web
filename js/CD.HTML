@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访问量统计 | 我的网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .counter-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .counter-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .counter-title {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .counter-number {
+            font-size: 3rem;
+            color: #4a5568;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 1rem 0;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .counter-text {
+            color: #718096;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 480px) {
+            .counter-container {
+                padding: 1.5rem;
+                width: 90%;
+            }
+            
+            .counter-title {
+                font-size: 1.4rem;
+            }
+            
+            .counter-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1 class="counter-title">欢迎访问！</h1>
+        <div class="counter-number" id="visitCount">0</div>
+        <p class="counter-text">感谢您的持续支持</p>
+    </div>
+
+    <script>
+        // 访问量统计
+        let visitCount = localStorage.getItem("page_view_pgcount") || 0;
+        visitCount++;
+        localStorage.setItem("page_view_pgcount", visitCount);
+
+        // 动态更新计数器
+        const counterElement = document.getElementById('visitCount');
+        counterElement.textContent = visitCount;
+
+        // 添加动态效果
+        counterElement.style.animation = 'none';
+        setTimeout(() => {
+            counterElement.style.animation = 'pulse 2s infinite';
+        }, 50);
+
+        // 首次访问提示
+        if(visitCount === 1) {
+            counterElement.insertAdjacentHTML('afterend', '<p class="counter-text">欢迎首次访问！</p>');
+        }
+    </script>
+</body>
+</html>
