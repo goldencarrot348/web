@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <script src="code/js/public_style.js"></script>  <!-- 公共样式 -->
+    <script src="code/js/index_animation.js"></script>  <!-- 动画 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InCraftTime | 纯净原版生存服</title>
+    <link rel="icon" href="https://www.incrafttime.top/assets/favicon.ico">  <!-- 网站图标 -->
+    <meta name="description" content="欢迎来到 InCraftTime，原版纯净生存服欢迎你！"> <!-- 网站描述 -->
+    <meta name="keywords" content="InCraftTime, Minecraft, 我的世界, Minecraft服务器, ICT, 纯净原版服务器"> <!-- 网站关键字 -->
+    <link rel="stylesheet" href="code/css/index.css">
+    <link rel="stylesheet" href="code/css/mcs.css">
+    <link rel="stylesheet" media="(max-width: 1200px)" href="code/css/index_mobile.css">
+    <link rel="stylesheet" href="code/css/FluentSystemIcons-Resizable.css">
+</head>
+<body>
+    <!-- header -->
+    <div id="header"></div> <!-- 用公共样式引入 -->
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="wrapper">
+            <div class="left">
+                <img src="code/images/logo_square.png" alt="InCraftTime 徽标">
+                <h2>InCraftTime</h2>
+                <p>纯净原版生存服</p>
+                <div class="bottom">
+                    <a href="https://www.incrafttime.top/contact.html" target="_blank" class="pushButton primary">
+                        <i class="icon-ic_fluent_arrow_right_20_filled"></i>
+                        现在体验
+                    </a>
+                    <div class="links">
+                        <a href="https://www.incrafttime.top/docs.html" class="link">玩家手册</a>
+                        <a href="https://www.incrafttime.top/contact.html" class="link">社区</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="server-card">
+        <div class="status-header">
+            <div class="status-indicator">
+                <div class="status-dot offline"></div>
+                <h2>服务器状态加载中...</h2>
+            </div>
+            <button class="refresh-btn" onclick="refreshData()" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+                </svg>
+                <span id="refreshBtn-text">刷新</span>
+            </button>
+        </div>
+        <div class="loading">正在获取服务器数据...</div>
+    </div>
+    
+    <div class="intro" id="intro_1">
+        <div class="wrapper">
+            <h2 class="animation"><strong>纯净原版</strong>生存服务器<br>欢迎你</h2>
+            <p>原版生存，但是更好玩。</p>
+            <!-- <img src="code/images/主世界地形展示4.png" alt="主世界地形展示4"> -->
+            <img src="code/images/67d55f7bc9514.png" alt="主世界地形展示4">
+        </div>
+    </div>
+
+    <div class="intro" id="feat_1">
+        <div class="wrapper">
+            <div class="left">
+                <h2 class="animation">严格的审核<br>良好的<strong>玩家氛围</strong></h2>
+                <p>正版验证+严格的审核，仔细查看每一位玩家的答卷，只为给大家创造良好的游戏环境与氛围。</p>
+            </div>
+            <!-- <img src="code/images/审核表.png" alt="审核表"> -->
+            <img src="code/images/681b38a4e9545.png" alt="审核表">
+        </div>
+    </div>
+
+    <div class="intro" id="feat_2">
+        <div class="wrapper">
+            <div class="carousel">
+                <div class="screenshot-container">
+                    <!--
+                    <img src="code/images/丛林废墟(Jungle Ruins).png" alt="丛林废墟(Jungle Ruins)">
+                    <img src="code/images/地下墓室(Catacomb).png" alt="地下墓室(Catacomb)">
+                    <img src="code/images/孤独堡垒(Lone Citadel).png" alt="孤独堡垒(Lone Citadel)">
+                    <img src="code/images/剧毒魔窟(Toxic Lair).png" alt="剧毒魔窟(Toxic Lair)">
+                    <img src="code/images/末地堡垒(End Castle).png" alt="末地堡垒(End Castle)">
+                    <img src="code/images/末地地形展示1.png" alt="末地地形展示1">
+                    <img src="code/images/末地地形展示2.png" alt="末地地形展示2">
+                    <img src="code/images/主世界地形展示1.png" alt="主世界地形展示1">
+                    <img src="code/images/主世界地形展示2.png" alt="主世界地形展示2">
+                    <img src="code/images/主世界地形展示3.png" alt="主世界地形展示3">
+                    <img src="code/images/主世界地形展示4.png" alt="主世界地形展示4">
+                    <img src="code/images/三叉戟审判遗迹(Trident Trial Monument).png" alt="三叉戟审判遗迹(Trident Trial Monument)">
+                    <img src="code/images/沙漠废墟(Desert Ruins).png" alt="沙漠废墟(Desert Ruins)">
+                    <img src="code/images/试炼神庙(Shrine).png" alt="试炼神庙(Shrine)">
+                    <img src="code/images/下界主楼(Nether Keep).png" alt="下界主楼(Nether Keep)">
+                    -->
+                    <img src="code/images/67d55f86cfefa.png" alt="丛林废墟(Jungle Ruins)" title="丛林废墟(Jungle Ruins)">
+                    <img src="code/images/67d55f8683865.png" alt="地下墓室(Catacomb)" title="地下墓室(Catacomb)" />
+                    <img src="code/images/67d55f85aeec5.png" alt="孤独堡垒(Lone Citadel)" title="孤独堡垒(Lone Citadel)">
+                    <img src="code/images/67d55f86d3485.png" alt="剧毒魔窟(Toxic Lair)" title="剧毒魔窟(Toxic Lair)">
+                    <img src="code/images/67d55f8430276.png" alt="末地堡垒(End Castle)" title="末地堡垒(End Castle)">
+                    <img src="code/images/67d55f7b2a387.png" alt="末地地形展示1" title="末地地形展示1">
+                    <img src="code/images/67d55f7b75432.png" alt="末地地形展示2" title="末地地形展示2">
+                    <img src="code/images/67d55f7c4b829.png" alt="主世界地形展示1" title="主世界地形展示1">
+                    <img src="code/images/67d55f79c7d4d.png" alt="主世界地形展示2" title="主世界地形展示2">
+                    <img src="code/images/67d55f7c2f02f.png" alt="主世界地形展示3" title="主世界地形展示3">
+                    <img src="code/images/67d55f7bc9514.png" alt="主世界地形展示4" title="主世界地形展示4">
+                    <img src="code/images/67d55f84b4eba.png" alt="三叉戟审判遗迹(Trident Trial Monument)" title="三叉戟审判遗迹(Trident Trial Monument)">
+                    <img src="code/images/67d55f857f390.png" alt="沙漠废墟(Desert Ruins)" title="沙漠废墟(Desert Ruins)">
+                    <img src="code/images/67d55f848fdfb.png" alt="试炼神庙(Shrine)" title="试炼神庙(Shrine)">
+                    <img src="code/images/67d55f85a0040.png" alt="下界主楼(Nether Keep)" title="下界主楼(Nether Keep)">
+                </div>
+                <button class="prev">
+                    <i class="icon-ic_fluent_caret_left_20_filled"></i>
+                </button>
+                <button class="next">
+                    <i class="icon-ic_fluent_caret_right_20_filled"></i>
+                </button>
+            </div>
+
+            <div class="right">
+                <h2 class="animation">在<strong>原版</strong>的基础上<br>新增好玩的特性</h2>
+                <p>添加了许多调整后的数据包<a href="index.html#fn1" class="footnote">1</a><br>以保持原版和数据包之间的平衡，增加游玩性的同时保持原版。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro" id="how_to_join">
+        <div class="wrapper">
+            <h2 class="animation">如何进服游玩？</h2>
+
+            <div class="cards_grid">
+                <div class="card">
+                    <div class="top">
+                        <i class="icon-ic_fluent_add_circle_20_regular"></i>
+                        <h3>进入白名单审核群</h3>
+
+                        <a href="https://qm.qq.com/cgi-bin/qm/qr?authKey=upZAZpIgp3I7eJ9yDTmMGi6YMxZBBdjBlX9MNH9xU5We85RkTTFO0%2FvRfaG9ueTv&k=AYF9B_IVtMxbb6Fck-hZCbDDDROzcrIy&noverify=0" target="_blank" class="toolButton primary">
+                            <i class="icon-ic_fluent_chevron_right_20_filled"></i>
+                        </a>
+                    </div>
+                    <p>进群后请认真查看群公告中的所有内容。</p>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <i class="icon-ic_fluent_chat_cursor_20_regular"></i>
+                        <h3>填写审核申请表</h3>
+                    </div>
+                    <p>考点均为手册规则，请完整阅读手册后填写。</p>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <i class="icon-ic_fluent_chat_arrow_back_20_regular"></i>
+                        <h3>等待审核结果更新</h3>
+                    </div>
+                    <p>结果更新完成时会在群内通知，请耐心等待。<br>注意：本服不会以邮件、私聊等方式主动通知你审核结果，<br>遇到此类情况请及时告知管理员。</p>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <i class="icon-ic_fluent_checkmark_square_20_regular"></i>
+                        <h3>通过后进入大群</h3>
+                    </div>
+                    <p>审核通过即可直接添加大群，机器人会自动同意入群申请。<br>若机器人拒绝/未处理你的入群申请，请寻求管理员帮助。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro" id="download">
+        <div class="wrapper">
+            <h2>更多特性等你自行体验</h2>
+            <div class="bottom">
+                <a href="https://www.incrafttime.top/contact.html" target="_blank" class="pushButton primary">
+                    <i class="icon-ic_fluent_arrow_right_20_filled"></i>
+                    加入 InCraftTime
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footnote脚注 -->
+    <div class="footnotes">
+        <div class="wrapper">
+            <ul>
+                <li id="fn1">1. 服务器基于原版，给原版新增更多玩法。基于原版，而不超出原版。本服修改都基于此原则。
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div id="footer"></div> <!-- 用公共样式引入 -->
+    <script>
+        const API_URL = 'https://api.mcstatus.io/v2/status/java/mc.incrafttime.top';
+        const card = document.querySelector('.server-card');
+        const refreshBtn = document.querySelector('.refresh-btn');
+
+        async function fetchData() {
+            try {
+                refreshBtn.disabled = true;
+                document.getElementById('refreshBtn-text').textContent = '刷新中...';
+                
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error('请求失败');
+                const data = await response.json();
+                
+                updateServerStatus(data);
+                refreshBtn.disabled = false;
+                document.getElementById('refreshBtn-text').textContent = '刷新';
+            } catch (error) {
+                card.querySelector('.loading').textContent = '数据加载失败';
+                refreshBtn.disabled = false;
+                document.getElementById('refreshBtn-text').textContent = '刷新';
+                console.error('错误详情:', error);
+            }
+        }
+
+        function refreshData() {
+            const oldInfo = card.querySelectorAll('.server-info, .player-list, .loading');
+            oldInfo.forEach(element => element.remove());
+            
+            const loading = document.createElement('div');
+            loading.className = 'loading';
+            loading.textContent = '正在刷新数据...';
+            card.appendChild(loading);
+            
+            fetchData();
+        }
+
+        function updateServerStatus(data) {
+            card.querySelectorAll('.loading').forEach(el => el.remove());
+            
+            const isOnline = data.online;
+            const statusDot = card.querySelector('.status-dot');
+            statusDot.className = `status-dot ${isOnline ? 'online' : 'offline'}`;
+            
+            card.querySelector('h2').innerHTML = `
+                InCraftTime 状态: 
+                <span style="color: ${isOnline ? '#3ba55d' : '#ed4245'}">
+                    ${isOnline ? '在线' : '离线'}
+                </span>
+            `;
+
+            const infoContainer = document.createElement('div');
+            const online = data.players?.online || 0;
+            const max = data.players?.max || 0;
+            const percent = max > 0 ? ((online / max) * 100).toFixed(1) : '0.0';
+
+            infoContainer.innerHTML = `
+                <div class="server-info">
+                    ${data.motd?.html || '未知'}
+                </div>
+                <div class="server-info">
+                    <span class="info-label">版本:</span> 
+                    ${data.version?.name_html || '未知'}
+                </div>
+                <div class="server-info">
+                    <span class="info-label">在线玩家:</span>
+                    ${online}/${max}
+                    <span class="player-percent">(${percent}%)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="player-progress"></div>
+                    </div>
+                </div>
+            `;
+
+            const progressBar = infoContainer.querySelector('#player-progress');
+            const percentage = max > 0 ? (online / max) : 0;
+            progressBar.style.width = `${percentage * 100}%`;
+            
+            progressBar.className = 'progress-bar';
+            if (percentage >= 0.8) {
+                progressBar.classList.add('high-usage');
+            } else if (percentage >= 0.6) {
+                progressBar.classList.add('medium-usage');
+            }
+
+            if (isOnline && data.players?.list?.length > 0) {
+                const playerList = document.createElement('div');
+                playerList.className = 'player-list';
+                playerList.innerHTML = `
+                    <div class="info-label">在线玩家列表：</div>
+                    ${data.players.list.map(player => `
+                        <div>${player.name_clean}</div>
+                    `).join('')}
+                `;
+                infoContainer.appendChild(playerList);
+            }
+
+            card.appendChild(infoContainer);
+        }
+
+        fetchData();
+        fetch('/src/data/latest-commit.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('commit-id').textContent = data.commitId.slice(0, 7); // 显示短ID
+        })
+        .catch(() => {
+            document.getElementById('commit-id').textContent = '获取失败';
+        });
+    </script>
+</body>
+</html>
